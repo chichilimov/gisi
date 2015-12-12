@@ -1,0 +1,243 @@
+/*------------------------------------*\
+    BASE STYLES
+\*------------------------------------*/
+*, *:before, *:after { box-sizing: border-box; }
+
+// sticky footer
+html, body {
+  height: 100%;
+}
+.body-wrap {
+  min-height: 100%;
+  margin-bottom: -30px;
+  &:after {
+    content: "";
+    display: block;
+    height: 30px;
+  }
+}
+footer {
+  height: 30px;
+}
+
+//
+body {
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  background-color: @holy-light;
+  color: @pitch-black;
+}
+
+.crate {
+  width: @container-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  color: @pitch-black;
+  text-decoration: none;
+  //.transition(.2s,ease-out);
+  &:hover {
+    color: @very-dark-teal;
+  }
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: @teal;
+    text-decoration: none;
+    //.transition(.2s,ease-out);
+    &:hover {
+      color: @very-dark-teal;
+    }
+  }
+}
+
+/*------------------------------------*\
+    HEADERS
+\*------------------------------------*/
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 500;
+}
+h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/*------------------------------------*\
+    BUTTONS
+\*------------------------------------*/
+.btn {
+  display: inline-block;
+  height: 50px;
+  padding-top: 0;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 0;
+  border: none;
+  outline: none;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  color: @holy-light;
+  background: @teal;
+  &:hover {
+    color: @holy-light;
+    background: @dark-teal;
+  }
+  &.btn-small {
+    height: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+    line-height: 30px;
+    font-size: 12px;
+  }
+  &.btn-medium{
+    height: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+  &.btn-rounded {
+    border-radius: 5px;
+  }
+  &.main-color {
+    background: @teal;
+    &:hover {
+      background: @dark-teal;
+    }
+  }
+}
+
+/*------------------------------------*\
+    FORMS
+\*------------------------------------*/
+
+input[type=checkbox], input[type=radio] {
+  position: absolute;
+  margin: 3px 0 0;
+  margin-left: -20px;
+  line-height: normal;
+}
+
+label.radio {
+  display: inline-block;
+  max-width: 100%;
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+select {
+  display: block;
+  outline: none;
+  width: 100%;
+  height: 30px;
+  padding: 4px 16px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: @pitch-black;
+  background-color: #fff;
+  background-image: none;
+  border-radius: 1px;
+  border: 1px solid @e5;
+}
+
+.control-label {
+  display: inline-block;
+  max-width: 100%;
+  padding-top: 7px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  .clearfix;
+  &.has-error {
+    .control-label {
+      color: #a94442;
+    }
+    .form-element {
+      border-color: #a94442;
+    }
+  }
+}
+
+.col-label {
+  float: left;
+  width: 20%;
+  padding-right: 10px;
+}
+
+.col-input {
+  float: left;
+  width: 80%;
+}
+
+.form-element {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #cbcbcb;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+textarea.form-element {
+  height: auto;
+}

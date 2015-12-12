@@ -1,0 +1,336 @@
+/*------------------------------------*\
+    INDEX PAGE
+\*------------------------------------*/
+.news-wrap {
+
+  padding-top: 40px;
+  padding-left: 68px;
+  padding-right: 68px;
+  padding-bottom: 40px;
+
+  .clearfix;
+
+  .main-news {
+
+    width: 100%;
+
+    .clearfix;
+
+    .order-1 {
+
+      float: left;
+      width: 490px;
+      margin-right: 40px;
+
+      .news-card {
+
+        .news-image {
+          margin-bottom: 15px;
+          img {
+            width: 490px;
+            height: 330px;
+          }
+        }
+
+        .rubric {
+          margin-bottom: 15px;
+        }
+
+        .title {
+          margin-bottom: 15px;
+          a {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 700;
+          }
+        }
+
+        .description {
+          margin-bottom: 20px;
+          font-size: 18px;
+          line-height: 25px;
+        }
+
+      }
+
+    }
+
+    .order-2 {
+
+      float: left;
+      width: 245px;
+      margin-right: 40px;
+
+      .news-card {
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        .news-image {
+          img {
+            width: 245px;
+            height: 160px;
+          }
+        }
+
+        .title {
+          a {
+            line-height: 22px;
+            font-weight: 400;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .all-news {
+    margin-top: 20px;
+  }
+
+}
+
+
+.projects-wrap {
+
+  position: relative;
+
+  height: 470px;
+  background: url("../img/rostov-projects.jpg") top center;
+
+  text-align: center;
+
+}
+
+
+.stats-wrap {
+
+  position: relative;
+  height: 460px;
+
+  .stat-category-list {
+
+    position: absolute;
+    top: 40px;
+    left: 30px;
+
+    .stat-category {
+
+      width: 54px;
+      height: 54px;
+      color: @holy-light;
+      background: @teal;
+      cursor: pointer;
+      border-bottom: 1px solid #a9e2f1;
+
+      &:hover, &.active {
+        background: @dark-teal;
+      }
+
+      .icon {
+        display: block;
+        width: 54px;
+        height: 54px;
+        line-height: 53px;
+        text-align: center;
+        font-size: 28px;
+      }
+
+    }
+
+  }
+
+  .stat-display-list {
+
+    .stat-img {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+
+  }
+
+
+}
+
+// Cards
+.cards-wrap {
+
+  background: #f1f0f0;
+
+  .crate {
+    padding-top: 60px;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-bottom: 70px;
+  }
+
+  .cards {
+
+    .clearfix;
+    perspective: 1800px;
+
+    >li {
+
+      float: left;
+      position: relative;
+      width: 330px;
+      height: 390px;
+      margin-bottom: 15px;
+      &:not(:nth-child(3n+3)) {
+        margin-right: 15px;
+      }
+
+      // transform
+      transform-style: preserve-3d;
+      transition: transform 550ms ease-in-out;
+
+      .front-side, .back-side {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 20px;
+        backface-visibility: hidden;
+        width: 100%;
+        height: 100%;
+      }
+
+      .front-side {
+        background: @holy-light;
+        .card-image img {
+          display: block;
+          width: 290px;
+          height: 290px;
+        }
+        .card-title {
+          margin-top: 25px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+
+      .back-side {
+
+        transform: rotateY(-180deg);
+        background: @holy-light;
+
+        .title {
+          margin-top: 5px;
+          margin-bottom: 10px;
+          text-align: center;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        .card-image-thin {
+          display: block;
+          img {
+            display: block;
+            width: 290px;
+            height: 135px;
+          }
+        }
+
+        .additional-info {
+          margin-top: 10px;
+          .btn {
+            text-transform: uppercase;
+            margin-right: 11px;
+          }
+        }
+
+        .description {
+          margin-top: 13px;
+          max-height: 80px;
+          overflow: hidden;
+          font-weight: 500;
+        }
+
+        .forum-posts {
+          .post-link {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid @e5;
+            a {
+              display: block;
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .vote {
+          .question {
+            padding-top: 10px;
+            font-weight: 500;
+          }
+          .answers {
+            margin-top: 25px;
+            margin-bottom: 35px;
+            .answer {
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        .card-link {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: block;
+          text-align: center;
+          font-size: 70px;
+          height: 70px;
+        }
+
+      }
+
+      &:hover {
+        transform: rotateY(-180deg);
+      }
+
+    }
+
+  }
+
+}
+
+// feature slider
+.feature-slider-box {
+  background: #fbfafa;
+}
+.feature-slider-wrap {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+// Panorama
+.panorama {
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  height: 469px;
+  background: url("../img/office-bg.jpg") repeat-x;
+
+  text-align: center;
+
+  img {
+    position: absolute;
+    margin-left: -960px;
+  }
+
+}

@@ -1,0 +1,97 @@
+.share-panel {
+
+  padding-right: 22px;
+
+  .date, .share-list, .additional-info {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid @e5;
+  }
+
+  .date + .share-list {
+    padding-top: 25px;
+  }
+
+  .date {
+    padding-top: 0;
+    color: @bc;
+  }
+
+  .share-list {
+
+    padding-top: 0;
+    padding-bottom: 15px;
+
+    .title {
+      margin-bottom: 17px;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+
+    .share-link {
+
+      position: relative;
+
+      display: block;
+      height: 20px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 20px;
+      color: @holy-light;
+      background: gray;
+      border-radius: 3px;
+
+      .icon {
+        display: inline-block;
+        width: 25px;
+        height: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .network-name {
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+        padding-left: 5px;
+        vertical-align: top;
+      }
+
+      .share-count {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding-left: 7px;
+        padding-right: 7px;
+        background: rgba(255,255,255,.2);
+      }
+
+      &:hover { opacity: .8 }
+
+      &.fb { background: @fb-bg; }
+      &.vk { background: @vk-bg; }
+      &.ok { background: @ok-bg; }
+
+    }
+
+  }
+
+  .additional-info {
+    .views,
+    .spread {
+      display: inline-block;
+      margin-right: 20px;
+      font-size: 12px;
+      color: rgba(0,0,0,.7);
+      .icon {
+        margin-right: 7px;
+        color: @teal;
+        font-size: 24px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+}

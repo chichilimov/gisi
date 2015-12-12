@@ -1,0 +1,151 @@
+/*------------------------------------*\
+    GENERAL PAGE STLES
+\*------------------------------------*/
+.page {
+
+  padding-top: 40px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 70px;
+
+  .with-share-panel {
+    padding-left: 210px;
+  }
+
+  .col-full {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+  .col-large {
+
+    position: relative;
+    float: left;
+    width: @col-large-width;
+
+  }
+
+  .col-half {
+    float: left;
+    width: 50%;
+    padding-right: 30px;
+  }
+
+  .col-side {
+    float: left;
+    width: @col-side-width;
+    &.with-border {
+      border-left: 1px solid @e5;
+    }
+  }
+
+  .share-panel-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 210px;
+  }
+
+  .page-copy {
+    padding-right: 20px;
+    border-right: 1px solid @e5;
+    &.no-border {
+      border-right: none;
+    }
+  }
+
+  .clearfix;
+
+}
+
+.row {
+  width: 100%;
+  .clearfix;
+}
+
+/*------------------------------------*\
+    HERO BLOCK FOR NEWS ETC
+\*------------------------------------*/
+.hero-image {
+  position: relative;
+  margin-bottom: 28px;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 150px;
+    padding-left: 75px;
+    padding-right: 400px;
+    padding-bottom: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 34px;
+    color: @holy-light;
+    .gradient(transparent, rgba(0,0,0,.85), transparent);
+  }
+  &.no-image {
+    padding-left: 210px;
+    .title {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      padding: 0;
+      padding-right: 300px;
+      background: @holy-light;
+      color: @pitch-black;
+    }
+  }
+}
+
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+@keyframes cloud {
+  0%   {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(120px,0);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes cloud-2 {
+  0%   {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(-120px,0);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes bird {
+  0%   {
+    transform: translate(0,0) rotateY(0deg);
+  }
+  1% {
+    transform: translate(0,0) rotateY(180deg);
+  }
+  50% {
+    transform: translate(-80px,0) rotateY(180deg);
+  }
+  51% {
+    transform: translate(-80px,0) rotateY(0deg);
+  }
+  100% {
+    transform: translate(0,0) rotateY(0deg);
+  }
+}
