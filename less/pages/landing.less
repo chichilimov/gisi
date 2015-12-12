@@ -4,15 +4,14 @@
 .news-wrap {
 
   padding-top: 40px;
-  padding-left: 68px;
-  padding-right: 68px;
   padding-bottom: 40px;
 
   .clearfix;
 
   .main-news {
 
-    width: 100%;
+    width: 1060px;
+    margin: auto;
 
     .clearfix;
 
@@ -58,11 +57,15 @@
     .order-2 {
 
       float: left;
-      width: 245px;
-      margin-right: 40px;
+      width: 530px;
 
       .news-card {
-
+        width: 245px;
+        float: left;
+        margin-right: 40px;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
         &:not(:last-child) {
           margin-bottom: 20px;
         }

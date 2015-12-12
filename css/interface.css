@@ -1784,8 +1784,6 @@ footer a:hover {
 \*------------------------------------*/
 .news-wrap {
   padding-top: 40px;
-  padding-left: 68px;
-  padding-right: 68px;
   padding-bottom: 40px;
   zoom: 1;
 }
@@ -1798,7 +1796,8 @@ footer a:hover {
   clear: both;
 }
 .news-wrap .main-news {
-  width: 100%;
+  width: 1060px;
+  margin: auto;
   zoom: 1;
 }
 .news-wrap .main-news:before,
@@ -1839,8 +1838,15 @@ footer a:hover {
 }
 .news-wrap .main-news .order-2 {
   float: left;
+  width: 530px;
+}
+.news-wrap .main-news .order-2 .news-card {
   width: 245px;
+  float: left;
   margin-right: 40px;
+}
+.news-wrap .main-news .order-2 .news-card:nth-child(2n) {
+  margin-right: 0;
 }
 .news-wrap .main-news .order-2 .news-card:not(:last-child) {
   margin-bottom: 20px;
