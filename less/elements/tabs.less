@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    TABS
+\*------------------------------------*/
+
+.tabs {
+
+  padding-left: 23px;
+  border-bottom: 1px solid #cbcbcb;
+
+  .clearfix;
+
+  .tab {
+
+    float: left;
+    margin-bottom: -1px;
+
+    a {
+      display: block;
+      margin-right: 5px;
+      padding: 16px 22px;
+      background: #f3f3f3;
+      border-radius: 4px 4px 0 0;
+      border: 1px solid transparent;
+      border-color: transparent transparent #cbcbcb;
+      .transition(.1s,ease);
+      transition-property: background;
+      &:hover {
+        background: @e5;
+        color: @pitch-black;
+      }
+    }
+
+    &.active {
+
+      a {
+        background: @holy-light;
+        border-color: #cbcbcb #cbcbcb @holy-light;
+      }
+
+    }
+
+  }
+
+}
+
+.tabs-wrap {
+  margin-bottom: 25px;
+}

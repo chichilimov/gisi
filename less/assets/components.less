@@ -24,6 +24,10 @@
     float: left;
     width: @col-large-width;
 
+    &.with-padding {
+      padding-right: 30px
+    }
+
   }
 
   .col-half {
@@ -32,13 +36,27 @@
     padding-right: 30px;
   }
 
+    .col-doc {
+      float: left;
+      width: 930px;
+    }
+
   .col-side {
     float: left;
     width: @col-side-width;
-    &.with-border {
-      border-left: 1px solid @e5;
-    }
+    border-left: 1px solid @e5;
   }
+
+    .col-third {
+      float: left;
+      width: 33.33333%;
+      padding-left: 15px;
+      padding-right: 15px;
+      &.no-padding {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
 
   .share-panel-wrap {
     position: absolute;
@@ -148,4 +166,264 @@
   100% {
     transform: translate(0,0) rotateY(0deg);
   }
+}
+
+/*------------------------------------*\
+    PRESS CENTER GRID
+\*------------------------------------*/
+.press-center-item {
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid @e5;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+/*------------------------------------*\
+    ORGANISATIONS LIST
+\*------------------------------------*/
+
+.org-grid {
+  padding-right: 20px;
+}
+
+.organisation-card {
+
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @e5;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .clearfix;
+
+  .org-info {
+
+    float: left;
+    width: 63%;
+    padding-right: 70px;
+
+    .title {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+
+    .description {}
+
+  }
+
+  .org-contact {
+
+    float: left;
+    width: 37%;
+
+    .contact-group {
+
+      margin-bottom: 13px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .group-name {
+        font-size: 12px;
+        line-height: 15px;
+        color: @bc;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+
+    }
+
+  }
+
+}
+
+/*------------------------------------*\
+    SITUATION CENTER LIST
+\*------------------------------------*/
+.situation-card {
+
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @e5;
+
+  .place {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: @bc;
+    margin-bottom: 7px;
+  }
+
+  .title {
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  .date {
+    margin-bottom: 7px;
+    font-weight: 500;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+}
+
+/*------------------------------------*\
+    DOCUMENTS SEARCH FORM
+\*------------------------------------*/
+.document-search {
+  .name-type {
+    .radio {
+      margin-right: 30px;
+    }
+  }
+  .dates {
+    .form-element {
+      display: inline-block;
+      width: 210px;
+    }
+    .separator {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+/*------------------------------------*\
+    DOCUMENTS TABLE
+\*------------------------------------*/
+.doc-table {
+  width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid #cbcbcb;
+  td {
+    padding: 17px 20px 15px;
+    border: 1px solid #cbcbcb;
+    &:first-child {
+      background: #f3f3f3;
+      width: 25%;
+    }
+  }
+}
+
+/*------------------------------------*\
+    DOCUMENTS DISCUSSION LIST
+\*------------------------------------*/
+.doc-discuss {
+  .entry {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid @e5;
+    .date {
+      opacity: .6;
+    }
+    .author {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .status {
+      float: right;
+      color: @bc;
+      font-weight: 500;
+      &.go {
+        color: @dark-teal;
+      }
+      &.nogo {
+        color: @orange;
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+/*------------------------------------*\
+    PHOTO GALLERY LIST
+\*------------------------------------*/
+.photo-gallery {
+
+  margin-bottom: 30px;
+  .clearfix;
+
+  .gallery {
+
+    position: relative;
+    float: left;
+    width: 360px;
+    height: auto;
+    min-height: 130px;
+    overflow: hidden;
+
+    //margin-right: 20px;
+    margin-bottom: 20px;
+
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+
+    .gallery-hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      .transition(.4s,ease-out);
+    }
+
+    .description {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+
+      .details {
+        position: absolute;
+        bottom: 100%;
+        padding: 30px;
+        padding-top: 0;
+        padding-bottom: 25px;
+        opacity: 0;
+        .transition(.5s,ease);
+        .author {
+          font-size: 12px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #d7d7d7;
+          margin-bottom: 5px;
+        }
+        .title {
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: 500;
+          color: @holy-light;
+        }
+      }
+
+    }
+
+    &:hover {
+      .gallery-hero-image {
+        transform: scale(1.1);
+      }
+      .description {
+        .gradient(transparent, rgba(0,0,0,.60), transparent);
+        .details {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
 }

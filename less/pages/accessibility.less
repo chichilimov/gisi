@@ -1,0 +1,436 @@
+/*------------------------------------*\
+    ACCESSIBILITY STYLES
+\*------------------------------------*/
+header{
+  .controlls-acc,
+  .search-bar-acc {
+    display: none;
+  }
+}
+
+.acc-contacts {
+  display: none;
+}
+
+body.in-acc-mode {
+
+    //font-size: 16px;
+
+  img {
+    display: none !important;
+  }
+
+  header {
+
+    height: auto !important;
+    background-image: none !important;
+
+    nav {
+      background-color: #cbcbcb;
+      .main-nav,
+      .secondary-nav {
+        font-size: inherit;
+        text-align: center;
+          >li {
+            font-size: 1em;
+            &.menu-item {
+                margin-left: -4px;
+               > a {
+                 padding-left: 15px;
+                 padding-right: 15px;
+                   color: @pitch-black;
+                 &:hover,
+                 &.active {
+                   color: @holy-light;
+                   background-color: @pitch-black;
+                 }
+               }
+            }
+          }
+      }
+      .secondary-nav {
+        text-align: center;
+        >li {
+          &.menu-item {
+              margin-left: -4px;
+             > a {
+                 &:hover,
+                 &.active {
+                   color: @holy-light;
+                   background-color: @pitch-black;
+                 }
+             }
+             &.with-menu-dropdown {
+               .sub-submenu {
+                 text-align: left;
+                 .sub-submenu-item {
+                   &:hover {
+                     a { color: @holy-light; }
+                     background: @pitch-black;
+                   }
+                 }
+               }
+               &:hover {
+                  > a {
+                    color: @holy-light;
+                    background-color:  @pitch-black;
+                  }
+               }
+             }
+          }
+        }
+      }
+    };
+
+    h1 { display: none; }
+
+    .site-controls { display: none; }
+
+    .controlls-acc,
+    .search-bar-acc { display: block; }
+
+  }
+
+  .panorama,
+  .feature-slider-wrap,
+  .cards-wrap {
+    display: none;
+  }
+
+  .acc-contacts {
+    display: block;
+  }
+
+  footer {
+    background: @pitch-black;
+    color: @holy-light;
+    a { color: @holy-light; }
+  }
+
+  .tabs {
+      padding-left: 0;
+      .tab {
+          a {
+              padding: 16px 7px;
+          }
+      }
+  }
+
+  .news-image {
+      display: none;
+  }
+  .news-image + .title {
+      padding-left: 0;
+      padding-top: 0;
+  }
+
+  .filter-list .search label .icon {
+      background: @pitch-black;
+  }
+
+  .filter-list .heading,
+  .filter-list .heading a {
+      color: @pitch-black;
+  }
+
+  .news-card {
+      .rubric {
+          a {
+              font-size: 1em;
+          }
+      }
+      .title {
+          a {
+              font-size: 1.4em;
+              line-height: 1.3em;
+          }
+      }
+      .date {
+          font-size: 1em;
+      }
+      .additional-info {
+          display: none;;
+      }
+  }
+
+  .news-grid .news-card {
+      float: none;
+      width: 80%;
+  }
+
+  color: @pitch-black !important;
+
+  &.small { font-size: 14px; }
+  &.medium { font-size: 16px; }
+  &.big { font-size: 18px; }
+
+  &.color-normal {}
+  &.color-inverted {
+    * {
+      color: @holy-light !important;
+      background: @pitch-black !important;
+    }
+  }
+  &.color-contrast {
+    * {
+      color: @holy-light !important;
+      background: #330099 !important;
+    }
+  }
+
+  a {
+    color: @pitch-black;
+    &:hover {
+      color: @holy-light !important;
+      background: @pitch-black;
+    }
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h3 {
+    font-size: 1.6em;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+
+
+  .btn {
+    font-size: 1.2em;
+    color: @holy-light;
+    background: @pitch-black;
+    &:hover {
+      color: @holy-light;
+      background: @pitch-black;
+    }
+    &.btn-small {
+      font-size: 1em;
+    }
+    &.btn-medium {
+      font-size: 1.2em;
+    }
+    &.main-color {
+      background: @pitch-black;
+      &:hover {
+        background: @pitch-black;
+      }
+    }
+  }
+
+  // NEWS ON HOMEPAGE
+  .main-news {
+
+    float: none;
+    width: 100%;
+
+    .order-1, .order-2 {
+      float: none;
+      width: 100%;
+    }
+    .order-2 {
+      margin-bottom: 20px;
+    }
+
+    .news-card {
+      border-bottom: 1px solid @pitch-black;
+    }
+
+    .title a{
+      font-weight: 400 !important;
+      font-size: 2em !important;
+      line-height: 1.2em !important;
+    }
+
+    .rubric a, .date {
+      font-size: 1em;
+      color: @pitch-black;
+    }
+
+    .additional-info, .description { display: none; }
+
+  }
+
+  .news-list {
+    float: none;
+    width: auto;
+    padding-left: 0;
+    border-left: 0;
+    li:not(:last-child) {
+      display: none;
+    }
+    li:last-child {
+      text-align: center;
+    }
+  }
+
+  // CONTACTS ON HOMEPAGE
+  .acc-contacts {
+    background: #cbcbcb;
+    .col-third {
+      font-size: 1.2em;
+      line-height: 1.5em;
+      h3 {
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  // docs
+  table.table {
+    border-color: @pitch-black;
+  }
+
+  table tbody tr:nth-child(even) {
+    background: @e5;
+  }
+
+  .forum-header-box {
+    background: @e5;
+  }
+
+  div.forum-header-box {
+    background: @e5;
+  }
+
+}
+
+header {
+
+  .controlls-acc {
+
+    height: 70px;
+    background: #cbcbcb;
+    .clearfix;
+
+    .normal-version,
+    .fonts-size,
+    .color-scheme {
+      float: left;
+      width: 33.33333%;
+      line-height: 70px;
+      text-align: center;
+      color: @pitch-black;
+      .title {
+        font-size: 1.2em;
+      }
+    }
+
+    .normal-version {
+      display: block;
+      font-size: 1.2em;
+      .icon {
+        font-size: 40px;
+        vertical-align: middle;
+        margin-right: 22px;
+      }
+    }
+
+    .fonts-size {
+      .size {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-left: 7px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover, &.active {
+          background: @holy-light;
+          border: 1px solid @pitch-black;
+        }
+        &.size-small {
+          font-size: 18px;
+        }
+        &.size-medium {
+          font-size: 24px;
+        }
+        &.size-big {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .color-scheme {
+      .color {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-left: 7px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 24px;
+        text-transform: uppercase;
+        &.color-normal {
+          color: @pitch-black !important;
+          background: @holy-light!important;
+          border: 1px solid @pitch-black!important;
+        }
+        &.color-inverted {
+          background: @pitch-black!important;
+          color: @holy-light!important;
+        }
+        &.color-contrast {
+          background: #330099 !important;
+          color: @holy-light!important;
+        }
+      }
+    }
+
+  }
+
+  .search-bar-acc {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .clearfix;
+
+    .site-title,
+    .search-container {
+      float: left;
+      display: block;
+      width: 50%;
+    }
+
+    .site-title {
+      position: relative;
+      padding-right: 70px;
+      padding-left: 140px;
+      .site-logo {
+        position: absolute;
+        left: 70px;
+        top: 50%;
+        margin-top: -33px;
+        display: inline-block !important;
+        height: 66px;
+        width: auto;
+      }
+      .title {
+        font-size: 2em;
+        line-height: 1.2em;
+      }
+    }
+
+    .search-container {
+      .search-input {
+        width: 400px;
+        height: 40px;
+        padding: 7px 10px;
+        border: 1px solid @pitch-black;
+        color: @pitch-black;
+        font-size: 1em;
+      }
+      .btn {
+        margin-left: 10px;
+      }
+    }
+
+  }
+
+}
