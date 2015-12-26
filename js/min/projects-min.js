@@ -1,0 +1,1 @@
+$(document).ready(function(){function o(){var o=$(".projects-wrap").width(),n=3846-o,t=n+3846;$(".projects-box").width(t).css("margin-right","-"+t/2+"px"),console.log(o)}o(),$(".projects").draggable({axis:"x",containment:".projects-box",scroll:!1}),$(window).on("resize",function(){o()})});

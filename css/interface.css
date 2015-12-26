@@ -724,6 +724,16 @@ textarea.form-element {
 /*------------------------------------*\
     ANIMATIONS
 \*------------------------------------*/
+@-webkit-keyframes pulse {
+  to {
+    box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);
+  }
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);
+  }
+}
 @-webkit-keyframes cloud {
   0% {
     -webkit-transform: translate(0, 0);
@@ -2180,8 +2190,139 @@ footer a:hover {
 .projects-wrap {
   position: relative;
   height: 470px;
-  background: url("../img/rostov-projects.jpg") top center;
-  text-align: center;
+  overflow: hidden;
+}
+.projects-wrap .projects-box {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 3846px;
+  height: 470px;
+}
+.projects-wrap .projects-box .projects {
+  position: absolute;
+  width: 3846px;
+  height: 470px;
+  cursor: move;
+}
+.projects-wrap .projects-box .projects .source {
+  display: block;
+}
+.projects-wrap .projects-box .projects .pin {
+  position: absolute;
+  top: 100px;
+  left: 900px;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  border-radius: 50%;
+  background-color: rgba(232, 76, 61, 0.6);
+  border: 2px solid rgba(232, 76, 61, 0.8);
+  display: block;
+  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+          animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  cursor: pointer;
+}
+.projects-wrap .projects-box .projects .pin.pin-airport {
+  top: 237px;
+  left: 3242px;
+}
+.projects-wrap .projects-box .projects .pin.pin-trams {
+  left: 3362px;
+  top: 395px;
+}
+.projects-wrap .projects-box .projects .pin.pin-trees-1 {
+  left: 3083px;
+  top: 391px;
+}
+.projects-wrap .projects-box .projects .pin.pin-stadium {
+  left: 2728px;
+  top: 254px;
+}
+.projects-wrap .projects-box .projects .pin.pin-canat-1 {
+  left: 2808px;
+  top: 57px;
+}
+.projects-wrap .projects-box .projects .pin.pin-stella-1 {
+  left: 2473px;
+  top: 94px;
+}
+.projects-wrap .projects-box .projects .pin.pin-theatre {
+  left: 2042px;
+  top: 175px;
+}
+.projects-wrap .projects-box .projects .pin.pin-most {
+  left: 1733px;
+  top: 293px;
+}
+.projects-wrap .projects-box .projects .pin.pin-trees-2 {
+  left: 1675px;
+  top: 402px;
+}
+.projects-wrap .projects-box .projects .pin.pin-canat-2 {
+  left: 1480px;
+  top: 96px;
+}
+.projects-wrap .projects-box .projects .pin.pin-hotel {
+  left: 1287px;
+  top: 287px;
+}
+.projects-wrap .projects-box .projects .pin.pin-bereg-1 {
+  left: 1133px;
+  top: 290px;
+}
+.projects-wrap .projects-box .projects .pin.pin-homes {
+  left: 1028px;
+  top: 194px;
+}
+.projects-wrap .projects-box .projects .pin.pin-business {
+  left: 791px;
+  top: 114px;
+}
+.projects-wrap .projects-box .projects .pin.pin-trees-3 {
+  left: 687px;
+  top: 377px;
+}
+.projects-wrap .projects-box .projects .pin.pin-bereg-2 {
+  left: 445px;
+  top: 313px;
+}
+.projects-wrap .projects-box .projects .pin.pin-stella-2 {
+  left: 145px;
+  top: 316px;
+}
+.projects-wrap .projects-box .projects .pin .copy {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 200px;
+  padding: 7px;
+  color: #ffffff;
+  font-size: 12px;
+  border-radius: 2px;
+  background-color: rgba(232, 76, 61, 0.8);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.projects-wrap .projects-box .projects .pin .copy.facing-up {
+  top: auto;
+  bottom: 30px;
+}
+.projects-wrap .projects-box .projects .pin .copy.facing-left {
+  right: auto;
+  left: 0;
+}
+.projects-wrap .projects-box .projects .pin:hover .copy {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 .stats-wrap {
   position: relative;
