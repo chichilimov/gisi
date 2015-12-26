@@ -1,5 +1,17 @@
 $( document ).ready(function() {
 
+    // Stat toggle
+    var statCategory = $(".stat-category");
+    var statCategoryImg = $(".stat-img");
+    statCategory.click(function(){
+        statCategory.removeClass("active");
+        $(this).addClass("active");
+        var currentCategory = $(this).index();
+        statCategoryImg.removeClass("active").eq(currentCategory).addClass("active");
+    });
+
+
+    // Project Panorama
     calculateProjectsPanorama();
 
     $( ".projects" ).draggable({
