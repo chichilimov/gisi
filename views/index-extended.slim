@@ -29,7 +29,8 @@ html lang="en"
             span.text-uppercase Уважаемые посетители!<br><br>
             | Сайт rostov-gorod.info создан для того, чтобы вы имели возможность в режиме online быть в курсе событий, происходящих в жизни Ростова, могли высказать мнение об актуальных для вас проблемах, а также задать через интернет-приемную интересующие вас вопросы. Искренне надеюсь, что общими усилиями мы сделаем столицу нашго края лучше, краше, комфортнее, а жизнь горожан – стабильнее и благополучнее.
 
-      .crate.news-wrap
+      .crate.news-wrap.extended
+        h5.index Новости
         include partials/_landing-news.slim
 
       .projects-wrap
@@ -74,11 +75,13 @@ html lang="en"
               img.hand src="img/drag-cursor.gif"
               span.copy Перетаскивайте слайд<br>для навигации по проектам
 
-      .stats-wrap.crate
+      .stats-wrap.crate.extended
+        h5.index Результаты и достижения
         include partials/_landing-stats.slim
 
       .feature-slider-box
         .crate.feature-slider-wrap
+          h5.index Инициативы и предложения
           include partials/_landing-feature-slider.slim
 
       .panorama
